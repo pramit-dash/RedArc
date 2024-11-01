@@ -18,13 +18,8 @@ bowled on a cricket pitch using a combination of computer vision and Python libr
 ```
 RedArc/
 ├── src/
-│   └── redarc/              # Main package directory
-│       ├── __init__.py
-│       ├── tracker.py       # Module to handle ball detection and tracking
-│       └── utils.py         # Module for helper functions
+│   └── redarc/              # Main package directory       
 ├── tests/                   # Test directory
-│   ├── __init__.py
-│   └── test_tracker.py      # Test for tracker module
 ├── .gitignore
 ├── README.md
 ├── pyproject.toml
@@ -32,6 +27,7 @@ RedArc/
 └── docs/
     ├── ADR/                 # Architecture Decision Records
     │   └── ADR-001-Project-Structure.md
+    ├── CONTRIBUTING.md      # Etiquette for Contributions
     ├── DEVELOPMENT_PLAN.md  # Project development roadmap
     └── DESIGN_OVERVIEW.md   # Overview of system design
 ```
@@ -50,13 +46,17 @@ RedArc/
     git clone https://github.com/pramit-dash/redarc.git
     cd redarc
     ```
+2. Set up python env for the project
+   ```bash
+   poetry env use 3.11
+   ```
 
-2. Install dependencies with Poetry:
+3. Install dependencies with Poetry:
     ```bash
     poetry install
     ```
 
-3. Run tests to confirm setup:
+4. Run tests to confirm setup:
     ```bash
     poetry run pytest
     ```
@@ -66,3 +66,4 @@ RedArc/
 To start the tracker on a sample video file:
 ```bash
 poetry run python src/redarc/tracker.py --video path/to/video.mp4
+```
