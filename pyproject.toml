@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "redarc"
+version = "0.1.0"
+description = "A project to track cricket ball trajectories using OpenCV and Python."
+authors = ["Pramit Dash <ga59cor@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "redarc", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+opencv-python = "^4.5.5"
+numpy = "^1.21.0"
+scikit-image = "^0.18.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+pytest-mock = "^3.6.1"
+black = "^22.3.0"
+flake8 = "^3.9.2"
+mypy = "^0.910"
+
+[build-system]
+requires = ["poetry>=1.1"]
+build-backend = "poetry.masonry.api"
